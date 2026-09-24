@@ -1,10 +1,32 @@
 # Authoring notes, not participant-facing
 context.md
 
-# macOS noise
-.DS_Store
+# Environment files & Secrets
+.env
+.env.*
+*.env
+!.env.example
+*.pem
+*.key
+*.crt
+*.p12
+credentials*.json
+service_account*.json
+*secret*.json
 
-# record-demo artifacts (Playwright install + temp recording dir)
+# Deployment metadata & Ephemeral Lab Runtime state
+deployment_metadata.json
+
+# macOS / OS noise
+.DS_Store
+Thumbs.db
+
+# Record-demo & Playwright artifacts
 node_modules/
 package-lock.json
 .video_tmp/
+.cache/
+.ms-playwright/
+ffmpeg*
+*.tar.xz
+*.tar.gz
